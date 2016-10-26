@@ -35,7 +35,7 @@ Removes a machine to the service.
   
 #### WAKE
 ```sh
-ecolab.py wake [-a] [-i IP]
+$ ecolab.py wake [-a] [-i IP]
 ```
 
 * __-a:__ Turn on all the machines registered.
@@ -44,7 +44,7 @@ ecolab.py wake [-a] [-i IP]
 
 #### DOWN
 ```sh
-ecolab.py down [-a] [-i IP]
+$ ecolab.py down [-a] [-i IP]
 ```
 
 * __-a:__ Turn off all the machines registered.
@@ -54,7 +54,7 @@ ecolab.py down [-a] [-i IP]
 
 #### SETHOUR
 ```sh
-ecolab.py sethour [-w] [-d] hh:mm
+$ ecolab.py sethour [-w] [-d] hh:mm
 ```
 
 * __-w:__ Sets the power on time.
