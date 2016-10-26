@@ -48,11 +48,11 @@ def connect(ip, port):
 ####### FUNCIONES GENERALES #########
 
 def leerArp():
-   arch = open("arp.dat")
-   for linea in arch:
-      linea = linea.strip().split("-")
-      print linea
-   arch.close()
+        arch = open("data/arp.dat")
+        for linea in arch:
+                linea = linea.strip().split("-")
+                #print linea
+        arch.close()
 
 def wakeOnLan(macaddress):
         if len(macaddress) == 12:
@@ -75,11 +75,11 @@ def wakeOnLan(macaddress):
         
 def  sendCmd(sock):
         while True:
-            cmd = raw_input("camando->") #le damos entrada por teclado al comandque deseamos  
-            sock.send(cmd)#enviamos el comando
-            time.sleep(2)
-            output = sock.recv(100000)#recibimos la salida
-            print output #printeamos la salida
+                cmd = raw_input("camando->") #le damos entrada por teclado al comand que deseamos  
+                sock.send(cmd)#enviamos el comando
+                time.sleep(2)
+                output = sock.recv(100000)#recibimos la salida
+                print output #printeamos la salida
 
 
 def tryConnect(ip, port):
@@ -93,7 +93,7 @@ def tryConnect(ip, port):
 
 ####### ANALISIS DE ARGUMENTOS ########
 if __name__ == "__main__":
-         leerArp()
+        leerArp()
         os.system("clear")
         
         if len(sys.argv) != 1: #Si existen argumentos
