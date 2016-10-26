@@ -13,7 +13,7 @@ Open plataform for automating computer labs oriented to energy saving.
 ### Commands:
 #### CHECK
 ```sh
- $ ecolabit.py check [-a] [-i IP]
+ $ ecolab.py check [-a] [-i IP]
 ```
 
 * __-a:__ Return a list of the machines registered with their status.
@@ -22,20 +22,20 @@ Open plataform for automating computer labs oriented to energy saving.
 
 #### ADD
 ```sh
-$ ecolabit.py add [IP:MAC]
+$ ecolab.py add [IP:MAC]
 ```
 Adds a machine to the service.
 
 
 #### REMOVE
 ```sh
-$ ecolabit.py remove [IP/MAC]
+$ ecolab.py remove [IP/MAC]
 ```
 Removes a machine to the service.
   
 #### WAKE
 ```sh
-ecolabit.py wake [-a] [-i IP]
+ecolab.py wake [-a] [-i IP]
 ```
 
 * __-a:__ Turn on all the machines registered.
@@ -44,7 +44,7 @@ ecolabit.py wake [-a] [-i IP]
 
 #### DOWN
 ```sh
-ecolabit.py down [-a] [-i IP]
+ecolab.py down [-a] [-i IP]
 ```
 
 * __-a:__ Turn off all the machines registered.
@@ -54,7 +54,7 @@ ecolabit.py down [-a] [-i IP]
 
 #### SETHOUR
 ```sh
-ecolabit.py sethour [-w] [-d] hh:mm
+ecolab.py sethour [-w] [-d] hh:mm
 ```
 
 * __-w:__ Sets the power on time.
