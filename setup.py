@@ -10,7 +10,7 @@ if not config:
     iptables = open("/etc/sysconfig/iptables", "a")
     iptables.write("""
 # EcoLabit
--A INPUT -p tcp --dport 5678 -j ACCEPT")
+-A INPUT -p tcp --dport 5678 -j ACCEPT
 """)
 iptables.close()
 
