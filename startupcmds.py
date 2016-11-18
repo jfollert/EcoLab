@@ -4,7 +4,7 @@ import pdb
 filename = "/etc/rc.local"
 flag = 0
 try:
-    with open("commands.yaml", 'r') as stream:
+    with open("startcommands.yaml", 'r') as stream:
         cmmds = yaml.load(stream)
         cmds = cmmds['cmd']
     for cmd in cmds:
