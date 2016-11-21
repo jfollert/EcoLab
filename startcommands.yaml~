@@ -1,0 +1,6 @@
+scriptname: test
+
+cmd: 
+    - reboot
+    - ls
+    - pwd
