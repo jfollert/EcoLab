@@ -20,7 +20,7 @@ def help(cmd="0"):
 
 ## WAKE
 def wake(ip):
-    print "Enviando paquete magico a:", ip
+    print "Enviando paquete magico a:", ip #(EN) Sending magic packet to: IP
     mac = arp[ip]
     print "MAC:", mac
     wakeOnLan(mac)
@@ -37,7 +37,7 @@ def wake(ip):
 
 ## CONNECT
 def connect(ip, port):
-    print "Intentando conexion a", ip + ":" + port
+    print "Intentando conexion a", ip + ":" + port #(EN) Trying connection to IP:Port
     tryConnect(ip, port)
     time.sleep(2)
     sendCmd(sock)
@@ -46,7 +46,7 @@ def connect(ip, port):
 ###### OTHER FUNCTIONS
 ## READ DATA
 def leerArp():
-    arch = open("data/arp.dat")
+    arch = open("data/arp.dat") #arp.dat is a ethernet/ip address database
     for linea in arch:
         linea = linea.strip().split("-")
         #print linea
@@ -60,7 +60,7 @@ def wakeOnLan(macaddress):
         sep = macaddress[2]
         macaddress = macaddress.replace(sep, '')
     else:
-        raise ValueError('Formato de MAC incorrecto!')
+        raise ValueError('Formato de MAC incorrecto!') #(EN) MAC format is incorrect!
 
     data = ''.join(['FFFFFFFFFFFF', macaddress * 20])
     send_data = ''
@@ -75,11 +75,11 @@ def wakeOnLan(macaddress):
 ## SEND CMD
 def sendCmd(sock):
     while True:
-        cmd = raw_input("camando->") #le damos entrada por teclado al comand que deseamos
-        sock.send(cmd)#enviamos el comando
+        cmd = raw_input("camando->") #le damos entrada por teclado al comand que deseamos # (EN) Get command from user
+        sock.send(cmd)#enviamos el comando  # (EN) Send the command
         time.sleep(2)
-        output = sock.recv(100000)#recibimos la salida
-        print output #printeamos la salida
+        output = sock.recv(100000)#recibimos la salida # (EN) Receive the command
+        print output #printeamos la salida 
 
 ## TRY CONNECT
 def tryConnect(ip, port):
@@ -89,7 +89,7 @@ def tryConnect(ip, port):
         server_address = (ip, int(port))
         sock.connect(server_address)
     except socket.error:
-        print "[ERROR] No se pudo establecer conexion con el servidor"
+        print "[ERROR] No se pudo establecer conexion con el servidor" # (EN) Could not establish a connection to the server
 
 ###### ARGS
 if __name__ == "__main__":
@@ -105,6 +105,7 @@ if __name__ == "__main__":
         elif sys.argv[1] == "connect":
             if len(sys.argv) > 2 and len(sys.argv) < 5:
                 #SI NO SE ESPECIFICA PUERTO, SE USA 5678 POR DEFECTO
+                # (EN) If no port is specified, port 5678 is used by default
                 if len(sys.argv) == 3:
                     port = "5678"
                 elif len(sys.argv) == 4:
@@ -114,7 +115,7 @@ if __name__ == "__main__":
                 if len(sys.argv) == 2:
                     help("connect")
                 else:
-                    print "NO SE ACEPTAN TANTOS ARGUMENTOS"
+                    print "NO SE ACEPTAN TANTOS ARGUMENTOS" # (EN) More than 4 arguments are not accepted
         elif sys.argv[1] == "wake":
             if len(sys.argv) > 2:
                 if sys.argv[2] == "-i":
