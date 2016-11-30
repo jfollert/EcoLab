@@ -5,7 +5,6 @@ import sys
 import os
 import time
 import struct
-import argparse
 ###### STATIC VARIABLES
 nm = __file__
 ###### CMD FUNCTIONS
