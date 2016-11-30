@@ -17,7 +17,7 @@ Open plataform for automating computer labs oriented to energy saving.
 ```
 
 * __-a:__ Return a list of the machines registered with their status.
- 
+
 * __-i:__ Return the status (ON/OFF) of a specific machine.
 
 #### ADD
@@ -31,8 +31,8 @@ Adds a machine to the service.
 ```sh
 $ ecolab.py remove [IP/MAC]
 ```
-Removes a machine to the service.
-  
+Removes a machine from the service.
+
 #### WAKE
 ```sh
 $ ecolab.py wake [-a] [-i IP]
