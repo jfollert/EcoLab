@@ -46,7 +46,7 @@ def connect(ip, port):
 ###### OTHER FUNCTIONS
 ## READ DATA
 def leerArp():
-    arch = open("data/arp.dat") #arp.dat is a ethernet/ip address database
+    arch = open("data/arp.dat") #arp.dat is an ethernet/ip address database
     for linea in arch:
         linea = linea.strip().split("-")
         #print linea
