@@ -1,5 +1,5 @@
 # EcoLab [vAlpha]
-Open plataform for automating computer labs oriented to energy saving.
+Open plataform made for automating Computer Science labs, oriented to energy saving.
 
 ![Status](https://img.shields.io/badge/version-alpha-yellow.svg)
 ![Python](https://img.shields.io/badge/python-2.7-blue.svg)
