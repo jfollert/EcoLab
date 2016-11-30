@@ -5,6 +5,7 @@ import sys
 import os
 import time
 import struct
+import argparse
 ###### STATIC VARIABLES
 nm = __file__
 ###### CMD FUNCTIONS
@@ -79,7 +80,7 @@ def sendCmd(sock):
         sock.send(cmd)#enviamos el comando  # (EN) Send the command
         time.sleep(2)
         output = sock.recv(100000)#recibimos la salida # (EN) Receive the command
-        print output #printeamos la salida 
+        print output #printeamos la salida
 
 ## TRY CONNECT
 def tryConnect(ip, port):
