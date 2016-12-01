@@ -46,7 +46,7 @@ def connect(ip, port):
 ###### OTHER FUNCTIONS
 ## READ DATA
 def leerArp():
-    arch = open("data/arp.dat") #arp.dat is a ethernet/ip address database
+    arch = open("data/arp.dat") #arp.dat is an ethernet/ip address database
     for linea in arch:
         linea = linea.strip().split("-")
         #print linea
@@ -75,11 +75,11 @@ def wakeOnLan(macaddress):
 ## SEND CMD
 def sendCmd(sock):
     while True:
-        cmd = raw_input("camando->") #le damos entrada por teclado al comand que deseamos # (EN) Get command from user
-        sock.send(cmd)#enviamos el comando  # (EN) Send the command
+        cmd = raw_input("camando->") #le damos entrada por teclado al comand que deseamos # (EN) Gets command from user
+        sock.send(cmd)#enviamos el comando  # (EN) Sends the command
         time.sleep(2)
-        output = sock.recv(100000)#recibimos la salida # (EN) Receive the command
-        print output #printeamos la salida 
+        output = sock.recv(100000)#recibimos la salida # (EN) Receives output
+        print output #printeamos la salida # (EN) Prints output
 
 ## TRY CONNECT
 def tryConnect(ip, port):
@@ -124,5 +124,5 @@ if __name__ == "__main__":
             pass
         elif sys.argv[1] == "sethour":
             pass
-    else: #if not exist argument then print the help
+    else: #if no arguments are met, prints help
         help()
