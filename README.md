@@ -1,5 +1,5 @@
 # EcoLab [vAlpha]
-Open plataform for automating computer labs oriented to energy saving.
+Open platform made to optimize resources on Computer Science labs.
 
 ![Status](https://img.shields.io/badge/version-alpha-yellow.svg)
 ![Python](https://img.shields.io/badge/python-2.7-blue.svg)
@@ -16,40 +16,40 @@ Open plataform for automating computer labs oriented to energy saving.
  $ ecolab.py check [-a] [-i IP]
 ```
 
-* __-a:__ Return a list of the machines registered with their status.
+* __-a:__ Returns a list of the machines registered and their status.
  
-* __-i:__ Return the status (ON/OFF) of a specific machine.
+* __-i:__ Returns the status (ON/OFF) of a specific machine.
 
 #### ADD
 ```sh
 $ ecolab.py add [IP:MAC]
 ```
-Adds a machine to the service.
+Adds a machine to the network.
 
 
 #### REMOVE
 ```sh
 $ ecolab.py remove [IP/MAC]
 ```
-Removes a machine to the service.
+Removes a machine off the network.
   
 #### WAKE
 ```sh
 $ ecolab.py wake [-a] [-i IP]
 ```
 
-* __-a:__ Turn on all the machines registered.
+* __-a:__ Turns on all the machines registered.
 
-* __-i:__ Turn on a specific machine.
+* __-i:__ Turns on a specific machine.
 
 #### DOWN
 ```sh
 $ ecolab.py down [-a] [-i IP]
 ```
 
-* __-a:__ Turn off all the machines registered.
+* __-a:__ Turns off all the machines registered.
 
-* __-i:__ Turn off a specific machine.
+* __-i:__ Turns off a specific machine.
 
 
 #### SETHOUR
