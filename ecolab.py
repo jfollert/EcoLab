@@ -1,13 +1,13 @@
-##### BasFO 2016
-##### MODULOS
+# MODULES #
+from argprocess import ArgsProcess
 import socket
 import sys
 import os
 import time
 import struct
-###### STATIC VARIABLES
+# STATIC VARIABLES #
 nm = __file__
-###### CMD FUNCTIONS
+# CMD FUNCTIONS #
 ## HELP
 def help(cmd="0"):
     helpDic = { "connect": "Use connect: \n\t" + nm + " connect [IP] [PORT] (port default = 5678)",
@@ -67,7 +67,6 @@ def wakeOnLan(macaddress):
 
     for i in range(0, len(data), 2):
         send_data = ''.join([send_data, struct.pack('B', int(data[i: i + 2], 16))])
-
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
     sock.sendto(send_data, ('<broadcast>', 7))
@@ -79,7 +78,7 @@ def sendCmd(sock):
         sock.send(cmd)#enviamos el comando  # (EN) Send the command
         time.sleep(2)
         output = sock.recv(100000)#recibimos la salida # (EN) Receive the command
-        print output #printeamos la salida 
+        print output #printeamos la salida
 
 ## TRY CONNECT
 def tryConnect(ip, port):
@@ -93,36 +92,9 @@ def tryConnect(ip, port):
 
 ###### ARGS
 if __name__ == "__main__":
-    leerArp()
-    os.system("clear")
-    if len(sys.argv) != 1: #If argument exist
-        if sys.argv[1] == "check":
-            pass
-        elif sys.argv[1] == "add":
-            pass
-        elif sys.argv[1] == "remove":
-            pass
-        elif sys.argv[1] == "connect":
-            if len(sys.argv) > 2 and len(sys.argv) < 5:
-                #SI NO SE ESPECIFICA PUERTO, SE USA 5678 POR DEFECTO
-                # (EN) If no port is specified, port 5678 is used by default
-                if len(sys.argv) == 3:
-                    port = "5678"
-                elif len(sys.argv) == 4:
-                    port = sys.argv[3]
-                connect(sys.argv[2], port)
-            else:
-                if len(sys.argv) == 2:
-                    help("connect")
-                else:
-                    print "NO SE ACEPTAN TANTOS ARGUMENTOS" # (EN) More than 4 arguments are not accepted
-        elif sys.argv[1] == "wake":
-            if len(sys.argv) > 2:
-                if sys.argv[2] == "-i":
-                    wake(sys.argv[3])
-        elif sys.argv[1] == "down":
-            pass
-        elif sys.argv[1] == "sethour":
-            pass
-    else: #if not exist argument then print the help
-        help()
+    try:
+        os.system("clear")
+    except:
+        pass
+
+    args =  ArgsProcessClient(__file__)

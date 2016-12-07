@@ -1,12 +1,11 @@
+# Modules #
 import socket
 import sys
 import time
 import subprocess
 
-#subprocess.call("poweroff")
-
 # Create a TCP/IP socket
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Bind the socket to the port
 server_address = ("0.0.0.0", 5678)
