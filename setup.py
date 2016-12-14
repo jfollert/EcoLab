@@ -1,17 +1,11 @@
-import subprocess
+from distutils.core import setup
 
-iptables = open("/etc/sysconfig/iptables", "r")
-config = False
-for linea in iptables:
-    if "EcoLab" in linea:
-        config = True
-iptables.close()
-if not config:
-    iptables = open("/etc/sysconfig/iptables", "a")
-    iptables.write("""
-# EcoLabit
--A INPUT -p tcp --dport 5678 -j ACCEPT
-""")
-iptables.close()
-
-subprocess.call(["service", "iptables", "restart"])
+setup(
+    name='EcoLab',
+    version='0.1',
+    description="Open platform made to optimize resources on Computer Science labs.",
+    url='https://github.com/basfom/EcoLab',
+    license="GPL-2.0",
+    #packages=[''],
+    #package_data={'': ['*.']},
+)

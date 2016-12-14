@@ -1,13 +1,13 @@
-scriptname: test1
+scriptname: testfilename
 
 filepath: /etc/init.d/
 
-linkpath: 
+linkpath:
     - /etc/rc0.d/
     - /etc/rc6.d/
 
 
-cmd: 
+cmd:
     - reboot
     - ls
     - pwd

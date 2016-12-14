@@ -3,7 +3,7 @@ import os
 #import pdb
 filename = "/etc/rc.local"
 try:
-    with open("startcommands.yaml", 'r') as stream:
+    with open("data/startcommands.yaml", 'r') as stream:
         cmmds = yaml.load(stream)
         cmds = cmmds['cmd']
     for cmd in cmds:
@@ -15,4 +15,3 @@ try:
 except IOError as e:
     if not os.access(filename, os.W_OK):
         print "Permission Denied"
-

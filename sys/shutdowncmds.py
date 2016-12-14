@@ -3,7 +3,7 @@ import os
 import subprocess
 
 try:
-    with open("shutcommands.yaml", 'r') as stream:
+    with open("data/shutcommands.yaml", 'r') as stream:
         cmmds = yaml.load(stream)
         script_name = cmmds['scriptname']
         file_path = cmmds['filepath']
