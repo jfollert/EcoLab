@@ -60,7 +60,7 @@ def wakeOnLan(macaddress):
         sep = macaddress[2]
         macaddress = macaddress.replace(sep, '')
     else:
-        raise ValueError('Formato de MAC incorrecto!') #(EN) MAC format is incorrect!
+        raise ValueError('Formato de MAC incorrecto!') #(EN) Incorrect MAC format!
 
     data = ''.join(['FFFFFFFFFFFF', macaddress * 20])
     send_data = ''
@@ -74,11 +74,11 @@ def wakeOnLan(macaddress):
 ## SEND CMD
 def sendCmd(sock):
     while True:
-        cmd = raw_input("camando->") #le damos entrada por teclado al comand que deseamos # (EN) Gets command from user
+        cmd = raw_input("camando->") #se ingresa por teclado el comando que deseamos # (EN) Gets command from user
         sock.send(cmd)#enviamos el comando  # (EN) Sends the command
         time.sleep(2)
         output = sock.recv(100000)#recibimos la salida # (EN) Receives output
-        print output #printeamos la salida # (EN) Prints output
+        print output #se imprime por pantalla la salida # (EN) Prints output
 
 ## TRY CONNECT
 def tryConnect(ip, port):
