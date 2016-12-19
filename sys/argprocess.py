@@ -7,12 +7,12 @@ class ArgsProcessClient:
         parser = argparse.ArgumentParser(usage = self.__namef + """ <command> [<args>]
         
 Commands:
-    check       Return the status of the machines.
+    check       Returns the status of all machines.
     add         Adds a machine to the service.
     remove      Removes a machine to the service.
-    wake        Turn on a machine.
-    down        Turn off a machine.
-    sethour     Sets the power on/off time.
+    wake        Turns on a machine.
+    down        Turns off a machine.
+    sethour     Sets a time at which a machine is turned on/off.
     """)
         parser.add_argument('command', help='Subcommand to run')
         args = parser.parse_args(sys.argv[1:2])
@@ -27,9 +27,9 @@ Commands:
         getattr(self, args.command)()
 
     def check(self):
-        parser = argparse.ArgumentParser(description='Return the status of the machines.', usage = self.__namef + " check [-a] [-i IP/MAC]")
-        parser.add_argument('-a', action='store_true', help= "Return a list of the machines registered with their status.")
-        parser.add_argument('-i', help="Return the status (ON/OFF) of a specific machine.")
+        parser = argparse.ArgumentParser(description='Returns the status of all machines.', usage = self.__namef + " check [-a] [-i IP/MAC]")
+        parser.add_argument('-a', action='store_true', help= "Returns a list of all machines registered and their status.")
+        parser.add_argument('-i', help="Returns the status (ON/OFF) of a specific machine.")
         args = parser.parse_args(sys.argv[2:])
         if args.a:
             print "Checking all machines..."
