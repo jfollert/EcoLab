@@ -38,7 +38,7 @@ Removes a machine off the network.
 $ ecolab.py wake [-a] [-i IP]
 ```
 
-* __-a:__ Turns on all the machines registered.
+* __-a:__ Turns on all registered machines.
 
 * __-i:__ Turns on a specific machine.
 
@@ -47,7 +47,7 @@ $ ecolab.py wake [-a] [-i IP]
 $ ecolab.py down [-a] [-i IP]
 ```
 
-* __-a:__ Turns off all the machines registered.
+* __-a:__ Turns off all registered machines.
 
 * __-i:__ Turns off a specific machine.
 
@@ -57,9 +57,9 @@ $ ecolab.py down [-a] [-i IP]
 $ ecolab.py sethour [-w] [-d] hh:mm
 ```
 
-* __-w:__ Sets the power on time.
+* __-w:__ Sets a time at which a machine turns on.
 
-* __-d:__ Sets the power off time.
+* __-d:__ Sets a time at which a machine turns off.
 
 
 ###### IN PROCESS
