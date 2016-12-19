@@ -12,7 +12,7 @@ Commands:
     remove      Removes a machine to the service.
     wake        Turns on a machine.
     down        Turns off a machine.
-    sethour     Sets the power on/off time.
+    sethour     Sets a time at which a machine is turned on/off.
     """)
         parser.add_argument('command', help='Subcommand to run')
         args = parser.parse_args(sys.argv[1:2])
