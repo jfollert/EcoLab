@@ -16,7 +16,7 @@ Open platform made to optimize resources on Computer Science labs.
  $ ecolab.py check [-a] [-i IP]
 ```
 
-* __-a:__ Returns a list of the machines registered and their status.
+* __-a:__ Returns a list of all registered machines and their status.
  
 * __-i:__ Returns the status (ON/OFF) of a specific machine.
 
