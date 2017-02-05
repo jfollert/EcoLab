@@ -1,5 +1,5 @@
 # EcoLab [vAlpha]
-Open platform made to optimize resources on Computer Science labs.
+An open platform made to optimize resources in computer science labs.
 
 ![Status](https://img.shields.io/badge/version-alpha-yellow.svg)
 ![Python](https://img.shields.io/badge/python-2.7-blue.svg)
