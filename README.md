@@ -1,7 +1,7 @@
 # EcoLab [vAlpha]
 An open platform made to optimize resources in computer science labs.
 
-![Status](https://img.shields.io/badge/version-alpha-yellow.svg)
+![Status](https://img.shields.io/badge/version-alpha-red.svg)
 ![Python](https://img.shields.io/badge/python-2.7-blue.svg)
 [![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://raw.githubusercontent.com/basfom/EcoLab/master/LICENSE)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/EcoLabMSG/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
