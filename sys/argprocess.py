@@ -9,7 +9,7 @@ class ArgsProcessClient:
 Commands:
     check       Returns the status of all machines.
     add         Adds a machine to the service.
-    remove      Removes a machine to the service.
+    remove      Removes a machine from the service.
     wake        Turns on a machine.
     down        Turns off a machine.
     sethour     Sets a time at which a machine is turned on/off.
