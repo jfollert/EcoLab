@@ -7,7 +7,7 @@ An open platform made to optimize resources in computer science labs.
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/EcoLabMSG/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ----
-### Objetives:
+### Objectives:
 
 ----
 ### Commands:
@@ -24,14 +24,14 @@ An open platform made to optimize resources in computer science labs.
 ```sh
 $ ecolab.py add [IP:MAC]
 ```
-Adds a machine to the network.
+* Adds a machine to the network.
 
 
 #### REMOVE
 ```sh
 $ ecolab.py remove [IP/MAC]
 ```
-Removes a machine off the network.
+* Removes a machine from the network.
   
 #### WAKE
 ```sh
