@@ -4,8 +4,8 @@ setup(
     name='EcoLab',
     version='0.1',
     description="Open platform made to optimize resources on Computer Science labs.",
-    url='https://github.com/basfom/EcoLab',
+    url='https://github.com/jfomu/EcoLab',
     license="GPL-2.0",
-    #packages=[''],
-    #package_data={'': ['*.']},
+    # packages=[''],
+    # package_data={'': ['*.']},
 )

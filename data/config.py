@@ -1,2 +1,2 @@
-HOSTNAME =
-PORT =
+HOSTNAME = ""
+PORT = ""

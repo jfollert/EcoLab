@@ -60,12 +60,3 @@ $ ecolab.py sethour [-w] [-d] hh:mm
 * __-w:__ Sets a time at which a machine turns on.
 
 * __-d:__ Sets a time at which a machine turns off.
-
-
-###### IN PROCESS
-
-----
-### Features:
-
-----
-### Structure:

