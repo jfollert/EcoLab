@@ -22,20 +22,20 @@ An open platform made to optimize resources in computer science labs.
 
 #### ADD
 ```sh
-$ ecolab.py add [IP:MAC]
+$ python ecolab.py add [IP:MAC]
 ```
 * Adds a machine to the network.
 
 
 #### REMOVE
 ```sh
-$ ecolab.py remove [IP/MAC]
+$ python ecolab.py remove [IP/MAC]
 ```
 * Removes a machine from the network.
   
 #### WAKE
 ```sh
-$ ecolab.py wake [-a] [-i IP]
+$ python ecolab.py wake [-a] [-i IP]
 ```
 
 * __-a:__ Turns on all registered machines.
@@ -44,7 +44,7 @@ $ ecolab.py wake [-a] [-i IP]
 
 #### DOWN
 ```sh
-$ ecolab.py down [-a] [-i IP]
+$ python ecolab.py down [-a] [-i IP]
 ```
 
 * __-a:__ Turns off all registered machines.
@@ -54,7 +54,7 @@ $ ecolab.py down [-a] [-i IP]
 
 #### SETHOUR
 ```sh
-$ ecolab.py sethour [-w] [-d] hh:mm
+$ python ecolab.py sethour [-w] [-d] hh:mm
 ```
 
 * __-w:__ Sets a time at which a machine turns on.
