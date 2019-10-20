@@ -13,7 +13,7 @@ An open platform made to optimize resources in computer science labs.
 ### Commands:
 #### CHECK
 ```sh
- $ ecolab.py check [-a] [-i IP]
+ $ python ecolab.py check [-a] [-i IP]
 ```
 
 * __-a:__ Returns a list of all registered machines and their status.

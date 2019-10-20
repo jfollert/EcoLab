@@ -6,6 +6,7 @@ setup(
     description="Open platform made to optimize resources on Computer Science labs.",
     url='https://github.com/jfomu/EcoLab',
     license="GPL-2.0",
+    requires=['PyYAML']
     # packages=[''],
     # package_data={'': ['*.']},
 )
