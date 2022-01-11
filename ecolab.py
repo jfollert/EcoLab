@@ -113,11 +113,20 @@ def try_connection(ip, port):
     except socket.error:
         print "[ERROR] Could not establish a connection to the server"
 
+# clear function
+def clear_console_screen():
+    # for windows
+    if os.name == 'nt':
+        _ = os.system('cls')
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = os.system('clear')
 
 ###### ARGS
 if __name__ == "__main__":
     try:
-        os.system("clear")
+        clear_console_screen()
     except:
         pass
 
